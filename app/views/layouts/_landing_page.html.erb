@@ -6,11 +6,12 @@
 <header class="hero"> 
   <nav class="navbar">
     <i class="fa-sharp fa-solid fa-bars" id="hamburgerMenu"></i>
+    <i class="fa-sharp fa-solid fa-times close-menu" style="display: none" id="closeHamBurger"></i>
     <div class="drawer">
       <div class="mobileNav">
         <ul>
           <li><li><a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">ABOUT US</a></li>
-          <li><li><a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Job Search</a></li>
+          <li><li><a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style='margin-bottom: 11px'>Job Search</a></li>
           <li>
             <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Employer Post / Job</a>
           </li>
@@ -37,7 +38,7 @@
       <div class="nativeAppLinks">
         <div class="apple">
             <%=image_tag "apple.png"%>
-          <div>
+          <div class="rating">
             <span>&#9733;</span>
             <span>&#9733;</span>
             <span>&#9733;</span>
@@ -48,13 +49,13 @@
         </div>
         <div class="google">
           <%= image_tag  "google.png" %>
-          <div>
+          <div class="rating">
             <span>&#9733;</span>
             <span>&#9733;</span>
             <span>&#9733;</span>
             <span>&#9733;</span>
             <span>&#9733;</span>
-            <span>4.7/5.0</span>
+            <span>4.7bin/rails server/5.0</span>
           </div>
         </div>
       </div>
@@ -91,6 +92,7 @@
       </div>
     </div>
     <div class="indiviual-information">
+      <%= image_tag  "asset2.jpg",:class => "fadein"%>
       <div class="right-indiviual-information">
         <span>A Profile That’s Uniquely You</span>
         <span
@@ -99,8 +101,11 @@
         >
         <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Build Your Profile</button>
       </div>
-      <%= image_tag  "asset2.jpg",:class => "fadein"%>
     </div>
+
+
+
+
     <div class="indiviual-information">
       <%= image_tag  "asset3.jpg" %>
       <div class="right-indiviual-information">

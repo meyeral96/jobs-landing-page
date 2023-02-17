@@ -115,12 +115,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 312px;
+  gap: 10px;
 }
 .textContent .nativeAppLinks .apple img {
   width: 152px;
   height: 50px;
 }
+.textContent .nativeAppLinks .apple .rating {
+  margin-top: 80px;
+}
+
+.textContent .nativeAppLinks .google .rating {
+  margin-top: 80px;
+}
+
 .textContent .nativeAppLinks .apple > div > span {
   color: rgba(0, 0, 0, 0.6);
   font-size: 11px;
@@ -686,6 +694,15 @@ footer .footer-container > div:nth-child(9) a {
     z-index: 1000;
     color: white;
   }
+  .close-menu {
+    color: white;
+    z-index: 1000;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    font-size: 24px;
+  }
+
   .drawer.select {
     height: 100vh;
     width: 100%;
@@ -699,19 +716,28 @@ footer .footer-container > div:nth-child(9) a {
   }
 
   .drawer.select .mobileNav {
-    display: block;
     z-index: 60000;
-    margin-top: 400px;
-    margin-left: 250px;
+    height: 50%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .drawer.select .mobileNav ul li a {
     color: #ffffff;
     font-weight: 500;
     font-size: 14px;
     padding: 16px;
-    margin-bottom: 5px;
     display: inline-block;
   }
+
+  .drawer.select .mobileNav ul li a:first-child {
+    margin-bottom: 0px;
+  }
+
   .drawer.select .mobileNav ul li:last-child {
     border-radius: 50px;
     font-size: 14px;
@@ -735,6 +761,15 @@ footer .footer-container > div:nth-child(9) a {
   .hero-content .textContent > span {
     font-size: 32px;
   }
+
+  .textContent .nativeAppLinks .google .rating {
+    margin-top: 0px;
+  }
+
+  .textContent .nativeAppLinks .apple .rating {
+    margin-top: 0px;
+  }
+
   .hero .hero-content {
     top: 128px;
   }
@@ -805,8 +840,7 @@ footer .footer-container > div:nth-child(9) a {
     display: flex;
     flex-direction: column;
   }
-  .drawer.select .mobileNav {
-    margin-top: 260px;
-    margin-left: 94px;
-  }
+  // .nativeAppLinks {
+  //   gap: 8px;
+  // }
 }
