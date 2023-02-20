@@ -9,6 +9,12 @@
   text-decoration: none;
 }
 
+.max-width-auto{
+  max-width: 1120px;
+  margin: auto;
+}
+
+
 .hero {
   background-color: #003f7f;
   height: 610px;
@@ -66,7 +72,7 @@
   display: grid;
   grid-template-columns: 51% 49%;
   position: relative;
-  top: 110px;
+  top: 130px;
   max-width: 1280px;
   width: 100%;
   margin: auto;
@@ -82,7 +88,7 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 50px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.5px;
   color: #ffffff;
   display: inline-block;
@@ -120,14 +126,12 @@
 .textContent .nativeAppLinks .apple img {
   width: 152px;
   height: 50px;
-}
-.textContent .nativeAppLinks .apple .rating {
-  margin-top: 80px;
+  border-radius: 7px;
+  background-color: #040707;
+  margin-bottom: 40px;
 }
 
-.textContent .nativeAppLinks .google .rating {
-  margin-top: 80px;
-}
+
 
 .textContent .nativeAppLinks .apple > div > span {
   color: rgba(0, 0, 0, 0.6);
@@ -136,6 +140,9 @@
 .textContent .nativeAppLinks .google img {
   width: 152px;
   height: 50px;
+  background-color: #040707;
+  border-radius: 7px;
+  margin-bottom: 40px;
 }
 .textContent .nativeAppLinks .google > div > span {
   color: rgba(0, 0, 0, 0.6);
@@ -165,9 +172,16 @@
 .maincontent .featuredInRow {
   display: grid;
   grid-template-columns: repeat(7, auto);
-  padding: 0 80px;
   grid-row-gap: 24px;
   grid-column-gap: 10px;
+}
+
+.maincontent .featuredInRow .asSeen{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.54);
+    
 }
 
 .maincontent .featuredInRow > img {
@@ -195,12 +209,24 @@
   color: rgba(0, 0, 0, 0.54);
   margin: 24px 0 72px 0;
 }
+
+
+
 .indiviual-information {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 0 50px;
   margin-bottom: 160px;
 }
+
+
+.maincontent-information .indiviual-information:last-child{
+  grid-template-columns: 40% 60%;
+}
+.maincontent .indiviual-information:nth-of-type(2){
+  grid-template-columns: 40% 60%;
+}
+
 .indiviual-information img {
   max-width: 470px;
   max-height: 632px;
@@ -464,6 +490,7 @@ footer .footer-container > div:nth-child(5) div {
   display: flex;
   justify-content: space-between;
   width: 160px;
+  margin: 14px 0;
 }
 footer .footer-container > div:nth-child(5) div > .apple,
 footer .footer-container > div:nth-child(5) div > .android {
@@ -580,6 +607,10 @@ footer .footer-container > div:nth-child(9) a {
     grid-template-columns: 100%;
   }
 
+.hero .hero-content{
+  top: 80px;
+}
+
   .stars div span {
     color: white;
   }
@@ -619,17 +650,35 @@ footer .footer-container > div:nth-child(9) a {
   .maincontent .featuredInRow {
     grid-template-columns: repeat(3, auto);
     margin: auto;
+    max-width: 720px;
   }
   .maincontent .featuredInRow span {
     grid-column: 1 / -1;
-    padding-left: 129px;
+    padding-left: 60px;
+    text-align: left;
   }
   .indiviual-information {
     grid-template-columns: auto;
   }
+
+
+    .maincontent-information .indiviual-information:last-child {
+      grid-template-columns: auto;
+    }
+  
+    .maincontent .indiviual-information:nth-of-type(2) {
+      grid-template-columns: auto;
+    }
+
   .right-indiviual-information {
     align-items: center;
+    text-align: center;
   }
+
+  .profile .right-indiviual-information{
+    grid-row: 2;
+  }
+
   .top-locations {
     grid-template-columns: auto auto;
   }
@@ -637,9 +686,7 @@ footer .footer-container > div:nth-child(9) a {
   .testimonial .testimonial-container {
     padding: 0px 10px;
   }
-  .buissness {
-    padding: 0 10px;
-  }
+  
 
   footer .footer-container {
     grid-template-columns: auto auto auto;
@@ -701,6 +748,8 @@ footer .footer-container > div:nth-child(9) a {
     font-size: 28px;
     z-index: 1000;
     color: white;
+    animation: rotate .3s ease;
+
   }
   .close-menu {
     color: white;
@@ -709,7 +758,14 @@ footer .footer-container > div:nth-child(9) a {
     top: 90px;
     left: 20px;
     font-size: 24px;
+    animation: rotate .3s ease;
   }
+
+  @keyframes rotate {
+    from {rotate: 160deg;}
+    to {rotate: 0deg;}
+  }
+
 
   .drawer.select {
     height: 100vh;
@@ -721,7 +777,20 @@ footer .footer-container > div:nth-child(9) a {
     top: 0;
     left: 0px;
     right: 0;
+    animation: zoom .3s ease;
   }
+
+  @keyframes zoom {
+    from {
+        border-radius: 50%;
+
+      }
+    
+      to {
+        border-radius: unset;
+      }
+  }
+
 
   .drawer.select .mobileNav {
     z-index: 60000;
@@ -787,6 +856,13 @@ footer .footer-container > div:nth-child(9) a {
     justify-content: center;
   }
 
+  .buissness{
+    padding: 0 10px;
+  }
+    .buissness>span{
+      font-size: 24px;
+    }
+
   .maincontent-information {
     padding: 0 10px;
   }
@@ -794,6 +870,8 @@ footer .footer-container > div:nth-child(9) a {
   .right-indiviual-information > span {
     font-size: 23px;
   }
+
+
 
   .maincontent .featuredInRow {
     grid-template-columns: repeat(2, auto);
@@ -848,7 +926,5 @@ footer .footer-container > div:nth-child(9) a {
     display: flex;
     flex-direction: column;
   }
-  // .nativeAppLinks {
-  //   gap: 8px;
-  // }
+  
 }
